@@ -1,16 +1,5 @@
 import { Component } from "react";
 
-// class Section extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <SectionTitle section={this.props.section}/>
-//         <SectionForm section={this.props.section}/>
-//       </div>
-//     );
-//   }
-// }
-
 class SectionTitle extends Component {
   render() {
     return (
@@ -20,56 +9,6 @@ class SectionTitle extends Component {
     );
   }
 }
-
-// class SectionForm extends Component {
-//   sectionFormPersonal = () => {
-//     return (
-//       <form>
-//         <InfoInput name="FirstName" />
-//         <InfoInput name="LastName" />
-//         <InfoInput name="PhoneNumber" />
-//         <InfoInput name="EmailAddress" />
-//         <InfoButton name="Submit" />
-//       </form>
-//     );
-//   }
-
-//   sectionFormExperience = () => {
-//     return (
-//       <form>
-//       <InfoInput name="Position" />
-//       <InfoInput name="Company" />
-//       <InfoInput name="DateFrom" />
-//       <InfoInput name="DateTo" />
-//       <InfoInput name="Description" />
-//       <InfoButton name="Submit" />
-//     </form>
-//     );
-//   }
-
-//   sectionFormEducation = () => {
-//     return (
-//       <form>
-//         <InfoInput name="Field" />
-//         <InfoInput name="School" />
-//         <InfoInput name="DateFrom" />
-//         <InfoInput name="DateTo" />
-//         <InfoInput name="Description" />
-//         <InfoButton name="Submit" />
-//     </form>
-//     );
-//   }
-
-//   render() {
-//     if (this.props.section === "Experience") {
-//       return this.sectionFormExperience();
-//     } else if (this.props.section === "Personal Information") {
-//       return this.sectionFormPersonal();
-//     } else if (this.props.section === "Education") {
-//       return this.sectionFormEducation();
-//     }
-//   }
-// }
 
 class InfoInput extends Component {
   makePlaceholder = (name) => {
