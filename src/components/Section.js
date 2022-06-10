@@ -88,9 +88,9 @@ class Section extends Component {
 
   render() {
     return (
-      <div>
+      <div className="section">
         <SectionTitle section={this.props.input.name} />
-        <ul>
+        <ul className="section-ul">
           {this.state.infosArray.map((ele) => {
             return (
               ele.submitted
@@ -125,6 +125,7 @@ function SectionForm(props) {
     <form
       onSubmit={onSubmit}
       id={infos.id}
+      className="section-form"
     >
       {Object.entries(infos).map(([key, value]) => {
         if (key !== 'id' && key !== 'submitted') {
@@ -151,7 +152,7 @@ function SectionSubmitted(props) {
 
   return (
     <div>
-      <ul>
+      <ul className="info-show-ul">
         {Object.entries(infos).map(([key, value]) => {
           if (key !== 'id' && key !== 'submitted') {
             return (

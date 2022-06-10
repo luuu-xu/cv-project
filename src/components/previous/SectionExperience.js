@@ -1,8 +1,8 @@
 import { Component } from "react";
-import { SectionTitle, InfoInput, InfoButton, InfoShow } from "./SectionComponents";
+import { InfoButton, InfoInput, InfoShow, SectionTitle } from "../SectionComponents";
 import uniqid from "uniqid";
 
-class SectionEducation extends Component {
+class SectionExperience extends Component {
   constructor() {
     super();
 
@@ -10,8 +10,8 @@ class SectionEducation extends Component {
       infosArray: [
         {
           id: uniqid(),
-          Subject: '',
-          School: '',
+          Position: '',
+          Company: '',
           DateFrom: '',
           DateTo: '',
           Description: '',
@@ -82,8 +82,8 @@ class SectionEducation extends Component {
   onAdd = (e) => {
     const newInfos = {
       id: uniqid(),
-      Subject: '',
-      School: '',
+      Position: '',
+      Company: '',
       DateFrom: '',
       DateTo: '',
       Description: '',
@@ -103,14 +103,14 @@ class SectionEducation extends Component {
             return (
               ele.submitted
               ? 
-              <SectionEducationSubmitted
+              <SectionExperienceSubmitted
                 key={ele.id}
                 infos={ele}
                 onEdit={this.onEdit}
                 onDelete={this.onDelete}
               />
               :
-              <SectionEducationForm
+              <SectionExperienceForm
                 key={ele.id}
                 infos={ele}
                 onSubmit={this.onSubmitInfos}
@@ -128,7 +128,7 @@ class SectionEducation extends Component {
   }
 }
 
-function SectionEducationForm(props) {
+function SectionExperienceForm(props) {
   const { infos, onSubmit, handleChange } = props;
 
   return (
@@ -156,7 +156,7 @@ function SectionEducationForm(props) {
   )
 }
 
-function SectionEducationSubmitted(props) {
+function SectionExperienceSubmitted(props) {
   const { infos, onEdit, onDelete } = props;
 
   return (
@@ -186,4 +186,4 @@ function SectionEducationSubmitted(props) {
   );
 }
 
-export default SectionEducation;
+export default SectionExperience;

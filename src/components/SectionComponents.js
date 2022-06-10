@@ -3,7 +3,7 @@ import { Component } from "react";
 class SectionTitle extends Component {
   render() {
     return (
-      <h3>
+      <h3 className="section-title">
         {this.props.section}
       </h3>
     );
@@ -25,6 +25,7 @@ class InfoInput extends Component {
           placeholder={this.makePlaceholder(this.props.name)}
           onChange={this.props.handleChange}
           value={this.props.value}
+          className="info-input"
         />
       </label>
     );
@@ -34,7 +35,7 @@ class InfoInput extends Component {
 class InfoButton extends Component {
   submitButton = () => {
     return (
-      <button type="submit">
+      <button type="submit" className="btn">
         {this.props.name}
       </button>
     );
@@ -42,7 +43,7 @@ class InfoButton extends Component {
 
   otherButton = () => {
     return (
-      <button onClick={this.props.onClick} id={this.props.id}>
+      <button onClick={this.props.onClick} id={this.props.id} className="btn">
         {this.props.name}
       </button>
     );
@@ -64,7 +65,7 @@ class InfoShow extends Component {
 
   render() {
     return (
-      <li>
+      <li className="info-show">
         {this.makeName(this.props.name)}: {this.props.info}
       </li>
     )

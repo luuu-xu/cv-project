@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { SectionTitle, InfoInput, InfoButton, InfoShow } from "./SectionComponents";
+import { SectionTitle, InfoInput, InfoButton, InfoShow } from "../SectionComponents";
 
 class SectionPersonal extends Component {
   constructor() {

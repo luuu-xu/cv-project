@@ -1,8 +1,8 @@
 import { Component } from "react";
-import { InfoButton, InfoInput, InfoShow, SectionTitle } from "./SectionComponents";
+import { SectionTitle, InfoInput, InfoButton, InfoShow } from "../SectionComponents";
 import uniqid from "uniqid";
 
-class SectionExperience extends Component {
+class SectionEducation extends Component {
   constructor() {
     super();
 
@@ -10,8 +10,8 @@ class SectionExperience extends Component {
       infosArray: [
         {
           id: uniqid(),
-          Position: '',
-          Company: '',
+          Subject: '',
+          School: '',
           DateFrom: '',
           DateTo: '',
           Description: '',
@@ -82,8 +82,8 @@ class SectionExperience extends Component {
   onAdd = (e) => {
     const newInfos = {
       id: uniqid(),
-      Position: '',
-      Company: '',
+      Subject: '',
+      School: '',
       DateFrom: '',
       DateTo: '',
       Description: '',
@@ -103,14 +103,14 @@ class SectionExperience extends Component {
             return (
               ele.submitted
               ? 
-              <SectionExperienceSubmitted
+              <SectionEducationSubmitted
                 key={ele.id}
                 infos={ele}
                 onEdit={this.onEdit}
                 onDelete={this.onDelete}
               />
               :
-              <SectionExperienceForm
+              <SectionEducationForm
                 key={ele.id}
                 infos={ele}
                 onSubmit={this.onSubmitInfos}
@@ -128,7 +128,7 @@ class SectionExperience extends Component {
   }
 }
 
-function SectionExperienceForm(props) {
+function SectionEducationForm(props) {
   const { infos, onSubmit, handleChange } = props;
 
   return (
@@ -156,7 +156,7 @@ function SectionExperienceForm(props) {
   )
 }
 
-function SectionExperienceSubmitted(props) {
+function SectionEducationSubmitted(props) {
   const { infos, onEdit, onDelete } = props;
 
   return (
@@ -186,4 +186,4 @@ function SectionExperienceSubmitted(props) {
   );
 }
 
-export default SectionExperience;
+export default SectionEducation;
