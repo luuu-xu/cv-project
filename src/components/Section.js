@@ -151,7 +151,7 @@ function SectionSubmitted(props) {
   const { infos, onEdit, onDelete, deleteButton } = props;
 
   return (
-    <div>
+    <>
       <ul className="info-show-ul">
         {Object.entries(infos).map(([key, value]) => {
           if (key !== 'id' && key !== 'submitted') {
@@ -178,7 +178,7 @@ function SectionSubmitted(props) {
       :
       null
       }
-    </div>
+    </>
   );
 }
 

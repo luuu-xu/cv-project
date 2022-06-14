@@ -14,7 +14,7 @@ body {
 .cv {
   margin: 50px;
   border: 2px dashed black;
-  width: min(60%, 800px);
+  width: clamp(600px, 60%, 800px);
 }
 
 .cv-header {
@@ -50,7 +50,12 @@ body {
   margin: .5rem;
 }
 
+label {
+  width: 80%;
+}
+
 .info-input {
+  width: 100%;
   font-family: inherit;
   font-size: 1rem;
   padding: .2rem 1rem;
